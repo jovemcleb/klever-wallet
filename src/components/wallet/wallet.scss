@@ -1,0 +1,33 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .bar-wallet {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 1rem;
+    width: 70rem;
+    max-width: 70rem;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    h1 {
+      padding-left: 0.5rem;
+      font-size: 2em;
+    }
+  }
+  .add-token-button {
+    background-color: #b039bf;
+    border: none;
+    border-radius: 0.4rem;
+    color: #ffff;
+    font-size: 1.6rem;
+    font-weight: 600;
+    width: 12rem;
+    height: 3.7rem;
+  }
+}
