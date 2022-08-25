@@ -3,6 +3,7 @@ import Header from '../components/header/header';
 import Wallet from '../components/wallet/wallet';
 import './home.scss';
 export default function Home() {
+  console.log('Home');
   return (
     <div className="container-main">
       <Header />

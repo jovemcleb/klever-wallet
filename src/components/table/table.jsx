@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { memo } from 'react';
 import './table.scss';
 
-export default function Table(props) {
+function TableComponent({ tokens }) {
   return (
     <table>
       <thead>
@@ -10,7 +10,16 @@ export default function Table(props) {
           <th className="thead-balance">Balance</th>
         </tr>
       </thead>
-      <tbody></tbody>
+      <tbody>
+        {tokens.map(({ token, balance }) => (
+          <tr key={token}>
+            <td>{token}</td>
+            <td>{balance}</td>
+          </tr>
+        ))}
+      </tbody>
     </table>
   );
 }
+
+export const Table = memo(TableComponent);
