@@ -1,20 +1,25 @@
 import React, { memo } from 'react';
 import './table.scss';
+import { FaEdit } from 'react-icons/fa';
 
 function TableComponent({ tokens }) {
   return (
     <table>
       <thead>
         <tr>
-          <th className="thead-token">Tokens</th>
-          <th className="thead-balance">Balance</th>
+          <th className="th-icons"></th>
+          <th className="th-token">Tokens</th>
+          <th className="th-balance">Balance</th>
         </tr>
       </thead>
       <tbody>
         {tokens.map(({ token, balance }) => (
           <tr key={token}>
-            <td>{token}</td>
-            <td>{balance}</td>
+            <td>
+              <FaEdit className="icon" />
+            </td>
+            <td className="td-token">{token}</td>
+            <td className="td-balance">{balance}</td>
           </tr>
         ))}
       </tbody>

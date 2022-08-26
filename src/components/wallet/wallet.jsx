@@ -7,11 +7,10 @@ import './wallet.scss';
 
 export default function Wallet() {
   const [tokens, setTokens] = useState([
+    { id: useId(), token: 'KLV', balance: '10,250.50' },
     { id: useId(), token: 'DVK', balance: '50,250.71' },
-    { id: useId(), token: 'KFI', balance: '10' },
-    { id: useId(), token: 'KLV', balance: '10,250.50' }
+    { id: useId(), token: 'KFI', balance: '10' }
   ]);
-  console.log(tokens);
 
   return (
     <main>

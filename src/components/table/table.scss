@@ -2,18 +2,44 @@ table {
   border-collapse: separate;
   margin: auto;
   padding-top: 4rem;
-  max-width: 45.8rem;
+  max-width: 46rem;
   width: 46rem;
+
   thead tr {
-    .thead-token {
-      padding-left: 4rem;
-      text-align: left;
-      font-size: 1.8rem;
+    .th-icons {
+      width: 3rem;
     }
 
-    .thead-balance {
+    .th-token {
+      text-align: left;
+      font-size: 1.8rem;
+      font-weight: 900;
+    }
+
+    .th-balance {
       text-align: right;
       font-size: 1.8rem;
+      font-weight: 900;
+    }
+  }
+
+  tbody tr {
+    font-size: 2em;
+
+    td .icon {
+      font-size: 1.6rem;
+      width: auto;
+    }
+
+    .td-token {
+      text-align: left;
+      padding: 1rem 0 1rem 0;
+      font-weight: 900;
+    }
+
+    .td-balance {
+      text-align: right;
+      font-weight: 900;
     }
   }
 }
