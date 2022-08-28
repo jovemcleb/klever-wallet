@@ -4,7 +4,7 @@ import Wallet from '../../components/wallet/wallet';
 import './home.scss';
 export default function Home() {
   return (
-    <div className="container-main">
+    <div className="container-main-home">
       <Header />
       <Wallet />
     </div>

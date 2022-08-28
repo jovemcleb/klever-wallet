@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
-import './table.scss';
 import { FaEdit } from 'react-icons/fa';
+import './table.scss';
 
 function TableComponent({ tokens }) {
   return (
