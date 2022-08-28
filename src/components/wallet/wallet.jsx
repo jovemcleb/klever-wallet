@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Table } from '../table/table';
+import StarWishWallet from '../starWishWallet/starWishWallet';
 import useId from 'react-id-generator';
-import shootingStar from '../../images/shooting-star.svg';
-
 import './wallet.scss';
 
 export default function Wallet() {
+  const history = useNavigate();
   const [tokens, setTokens] = useState([
     { id: useId(), token: 'KLV', balance: '10,250.50' },
     { id: useId(), token: 'DVK', balance: '50,250.71' },
@@ -15,11 +16,10 @@ export default function Wallet() {
   return (
     <main>
       <section className="bar-wallet">
-        <div>
-          <img className="shooting-star" src={shootingStar} alt="Shooting star" width="50px" />
-          <h1>Wish Wallet</h1>
-        </div>
-        <button className="add-token-button">Add Token</button>
+        <StarWishWallet />
+        <button className="add-token-button" onClick={() => history('/add-token')}>
+          Add Token
+        </button>
       </section>
       <Table tokens={tokens} />
     </main>
