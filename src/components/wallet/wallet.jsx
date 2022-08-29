@@ -8,7 +8,7 @@ import './wallet.scss';
 export default function Wallet() {
   const history = useNavigate();
   const { tokens } = useContext(WalletContext);
-
+  console.log(tokens);
   return (
     <main>
       <section className="bar-wallet">

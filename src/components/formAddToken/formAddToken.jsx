@@ -9,8 +9,9 @@ export default function FormAddToken() {
   const [token, setToken] = useState('');
   const [balance, setBalance] = useState('');
   const [isDisable, setIsDisable] = useState(true);
+  const [tokenExists, setTokenExists] = useState(false);
 
-  const { addToken } = useContext(WalletContext);
+  const { tokens, addToken } = useContext(WalletContext);
 
   const handleAddToken = (e) => {
     e.preventDefault();
@@ -18,16 +19,28 @@ export default function FormAddToken() {
 
     history('/');
   };
-  const validate = () => {
-    if (token.length >= 3 && balance.length >= 2) {
+
+  const validateInputs = () => {
+    if (token.length > 0 && token.length >= 3 && balance.length >= 2) {
       setIsDisable(false);
     } else {
       setIsDisable(true);
     }
   };
 
+  const validateToken = () => {
+    const exists = tokens.some((element) => element.token === token);
+    if (exists) {
+      setTokenExists(true);
+      setIsDisable(true);
+    } else {
+      setTokenExists(false);
+    }
+  };
+
   useEffect(() => {
-    validate();
+    validateInputs();
+    validateToken();
   }, [token, balance]);
 
   return (
@@ -42,6 +55,7 @@ export default function FormAddToken() {
           onChange={({ target }) => setToken(target.value)}
           required
         />
+        {tokenExists && <span className="alert-token">Token already exists</span>}
       </div>
 
       <div className="inputs">
