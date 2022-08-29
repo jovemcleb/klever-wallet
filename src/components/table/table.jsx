@@ -1,8 +1,10 @@
 import React, { memo } from 'react';
 import { FaEdit } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 import './table.scss';
 
 function TableComponent({ tokens }) {
+  const history = useNavigate();
   return (
     <table>
       <thead>
@@ -16,7 +18,7 @@ function TableComponent({ tokens }) {
         {tokens.map(({ token, balance }) => (
           <tr key={token}>
             <td>
-              <FaEdit className="icon" />
+              <FaEdit className="icon" onClick={() => history('/edit-token')} />
             </td>
             <td className="td-token">{token}</td>
             <td className="td-balance">{balance}</td>
