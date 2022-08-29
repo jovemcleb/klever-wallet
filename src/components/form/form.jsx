@@ -1,17 +1,18 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { WalletContext } from '../../context/walletContext';
-import './formAddToken.scss';
+import './form.scss';
 
-export default function FormAddToken() {
+export default function Form() {
   const history = useNavigate();
+  const { pathname } = useLocation();
 
   const [token, setToken] = useState('');
   const [balance, setBalance] = useState('');
   const [isDisable, setIsDisable] = useState(true);
   const [tokenExists, setTokenExists] = useState(false);
 
-  const { tokens, addToken, saveTokenLocalStorage } = useContext(WalletContext);
+  const { tokens, addToken } = useContext(WalletContext);
 
   const handleAddToken = (e) => {
     e.preventDefault();
@@ -70,7 +71,8 @@ export default function FormAddToken() {
         />
       </div>
 
-      <div className="div-button">
+      <div className={pathname === '/edit-token' ? 'div-button-edit' : 'div-button'}>
+        {pathname === '/edit-token' && <button className="button-remove">Remove</button>}
         <button
           className="button-save"
           disabled={isDisable}

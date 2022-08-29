@@ -1,4 +1,40 @@
 .container-main-edit-token {
   background-color: #13152a;
   height: 100vh;
+
+  .bar-edit-token {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-bottom: 2rem;
+    width: 50rem;
+    max-width: 50rem;
+  }
+  main {
+    .edit-back {
+      // border: 2px solid yellow;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin: auto;
+      width: 50rem;
+      max-width: 50rem;
+
+      h3 {
+        padding-left: 6rem;
+      }
+
+      .button-back {
+        background-color: #b039bf;
+        border: none;
+        border-radius: 0.4rem;
+        color: #ffff;
+        font-size: 1.6rem;
+        font-weight: 600;
+        width: 12rem;
+        height: 3.7rem;
+      }
+    }
+  }
 }
