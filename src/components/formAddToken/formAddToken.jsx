@@ -11,12 +11,12 @@ export default function FormAddToken() {
   const [isDisable, setIsDisable] = useState(true);
   const [tokenExists, setTokenExists] = useState(false);
 
-  const { tokens, addToken } = useContext(WalletContext);
+  const { tokens, addToken, saveTokenLocalStorage } = useContext(WalletContext);
 
   const handleAddToken = (e) => {
     e.preventDefault();
-    addToken({ token, balance });
-
+    const newArrTokens = [...tokens, { token, balance }];
+    addToken(newArrTokens);
     history('/');
   };
 

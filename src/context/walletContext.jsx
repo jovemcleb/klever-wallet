@@ -9,8 +9,9 @@ export function WalletProvider({ children }) {
     { token: 'KFI', balance: '10' }
   ]);
 
-  const addToken = ({ token, balance }) => {
-    setTokens((state) => [...state, { token, balance }]);
+  const addToken = (newArrTokens) => {
+    setTokens(newArrTokens);
+    localStorage.setItem('tokens', JSON.stringify(newArrTokens));
   };
 
   const context = {
