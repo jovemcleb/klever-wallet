@@ -11,14 +11,32 @@ export default function Form() {
   const [balance, setBalance] = useState('');
   const [isDisable, setIsDisable] = useState(true);
   const [tokenExists, setTokenExists] = useState(false);
+  const [tokenEdit, setTokenEdit] = useState('');
 
-  const { tokens, addToken } = useContext(WalletContext);
+  const { tokens, addToken, tokenToEdit } = useContext(WalletContext);
 
   const handleAddToken = (e) => {
     e.preventDefault();
     const newArrTokens = [...tokens, { token, balance }];
     addToken(newArrTokens);
     history('/');
+  };
+
+  const handleEditToken = (e) => {
+    e.preventDefault();
+    const tokensUpdated = tokens.map((element) => {
+      if (element.token === tokenEdit) {
+        return { token, balance };
+      }
+      return element;
+    });
+
+    addToken(tokensUpdated);
+  };
+
+  const handleRemoveToken = (token) => {
+    const newTokens = tokens.filter(({ token: eToken }) => eToken !== token);
+    addToken(newTokens);
   };
 
   const validateInputs = () => {
@@ -40,8 +58,21 @@ export default function Form() {
   };
 
   useEffect(() => {
-    validateInputs();
-    validateToken();
+    if (pathname === '/edit-token') {
+      const { token, balance } = tokenToEdit;
+      setToken(token);
+      setTokenEdit(token);
+      setBalance(balance);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (pathname === '/edit-token') {
+      validateInputs();
+    } else {
+      validateInputs();
+      validateToken();
+    }
   }, [token, balance]);
 
   return (
@@ -56,7 +87,9 @@ export default function Form() {
           onChange={({ target }) => setToken(target.value)}
           required
         />
-        {tokenExists && <span className="alert-token">Token already exists</span>}
+        {pathname !== '/edit-token' && tokenExists && (
+          <span className="alert-token">Token already exists</span>
+        )}
       </div>
 
       <div className="inputs">
@@ -71,12 +104,24 @@ export default function Form() {
         />
       </div>
 
-      <div className={pathname === '/edit-token' ? 'div-button-edit' : 'div-button'}>
-        {pathname === '/edit-token' && <button className="button-remove">Remove</button>}
+      <div className={pathname === '/edit-token' ? 'div-button edit' : 'div-button'}>
+        {pathname === '/edit-token' && (
+          <button
+            className="button-remove"
+            onClick={() => {
+              handleRemoveToken(token);
+              history('/');
+            }}>
+            Remove
+          </button>
+        )}
         <button
           className="button-save"
           disabled={isDisable}
-          onClick={(event) => handleAddToken(event)}>
+          onClick={(event) => {
+            pathname === '/edit-token' ? handleEditToken(event) : handleAddToken(event);
+            history('/');
+          }}>
           Save
         </button>
       </div>

@@ -8,6 +8,7 @@ export function WalletProvider({ children }) {
     { token: 'DVK', balance: '50,250.71' },
     { token: 'KFI', balance: '10' }
   ]);
+  const [tokenToEdit, setTokenToEdit] = useState({});
 
   const addToken = (newArrTokens) => {
     setTokens(newArrTokens);
@@ -17,7 +18,9 @@ export function WalletProvider({ children }) {
   const context = {
     tokens,
     setTokens,
-    addToken
+    addToken,
+    tokenToEdit,
+    setTokenToEdit
   };
   return <WalletContext.Provider value={context}>{children}</WalletContext.Provider>;
 }

@@ -34,15 +34,8 @@
     width: 44rem;
     max-width: 50rem;
 
-    .button-remove {
-      background-color: #920000;
-      border: none;
-      border-radius: 0.4rem;
-      color: #ffff;
-      font-size: 1.6rem;
-      font-weight: 600;
-      width: 12rem;
-      height: 3.7rem;
+    &.edit {
+      justify-content: space-between;
     }
 
     .button-save {
@@ -55,28 +48,9 @@
       width: 12rem;
       height: 3.7rem;
     }
-  }
-
-  .div-button-edit {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 4rem;
-    width: 44rem;
-    max-width: 50rem;
 
     .button-remove {
       background-color: #920000;
-      border: none;
-      border-radius: 0.4rem;
-      color: #ffff;
-      font-size: 1.6rem;
-      font-weight: 600;
-      width: 12rem;
-      height: 3.7rem;
-    }
-
-    .button-save {
-      background-color: #b039bf;
       border: none;
       border-radius: 0.4rem;
       color: #ffff;
