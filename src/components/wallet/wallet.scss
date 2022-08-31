@@ -18,9 +18,14 @@ main {
     border: none;
     border-radius: 0.4rem;
     color: #ffff;
+    cursor: pointer;
     font-size: 1.6rem;
     font-weight: 600;
     width: 12rem;
     height: 3.7rem;
+
+    &:active {
+      background-color: #ad4bb9;
+    }
   }
 }

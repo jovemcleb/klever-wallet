@@ -25,14 +25,24 @@
     }
 
     .button-back {
-      background-color: #b039bf;
+      background-color: #646464;
       border: none;
       border-radius: 0.4rem;
       color: #ffff;
+      cursor: pointer;
       font-size: 1.6rem;
       font-weight: 600;
+      transition: background 0.2s;
       width: 12rem;
       height: 3.7rem;
+
+      &:hover {
+        background-color: #b039bf;
+      }
+
+      &:active {
+        background-color: #ad4bb9;
+      }
     }
   }
 }
