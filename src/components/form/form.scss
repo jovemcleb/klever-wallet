@@ -20,6 +20,11 @@
     input {
       border-radius: 0.4rem;
       height: 3.7rem;
+      outline: 0;
+
+      &:focus {
+        border: 0.2rem solid #b039bf;
+      }
     }
 
     .alert-token {
