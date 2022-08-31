@@ -12,7 +12,7 @@ Email: lima.carodoso.caleb@gmail.com
 
 Celular: 91 980119059
 
-## \***\*📝\*\*** Descrição
+## 📝 Descrição
 
 Este projeto consiste em uma simples carteira, onde é possível:
 
@@ -21,14 +21,14 @@ Este projeto consiste em uma simples carteira, onde é possível:
 - Editar token e saldo;
 - Excluir token da carteira.
 
-## \***\*🔧 Tecnologias utilizadas\*\***
+## 🔧 Tecnologias utilizadas
 
 - React JS
 - SASS
 - React Icons
 - EsLint
 
-## \***\*🚀 Rodando o projeto\*\***
+## 🚀 Rodando o projeto
 
 1. Primeiramente, clone o projeto com o seguinte comando:
 
