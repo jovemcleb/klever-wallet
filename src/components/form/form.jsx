@@ -34,6 +34,17 @@ export default function Form() {
     addToken(tokensUpdated);
   };
 
+  const handleSave = (event) => {
+    event.preventDefault();
+    if (pathname === '/edit-token') {
+      handleEditToken(event);
+    } else {
+      handleAddToken(event);
+    }
+
+    history('/');
+  };
+
   const handleRemoveToken = (token) => {
     const newTokens = tokens.filter(({ token: eToken }) => eToken !== token);
     addToken(newTokens);
@@ -76,7 +87,7 @@ export default function Form() {
   }, [token, balance]);
 
   return (
-    <form className="form-addToken" action="">
+    <form className="form-addToken" onSubmit={handleSave}>
       <div className="inputs">
         <label htmlFor="input-token">Token</label>
         <input
@@ -115,13 +126,7 @@ export default function Form() {
             Remove
           </button>
         )}
-        <button
-          className="button-save"
-          disabled={isDisable}
-          onClick={(event) => {
-            pathname === '/edit-token' ? handleEditToken(event) : handleAddToken(event);
-            history('/');
-          }}>
+        <button className="button-save" disabled={isDisable}>
           Save
         </button>
       </div>
