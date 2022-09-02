@@ -24,8 +24,9 @@ Este projeto consiste em uma simples carteira, onde é possível:
 ## 🔧 Tecnologias utilizadas
 
 - React JS
-- SASS
+- React Router Dom
 - React Icons
+- SASS
 - EsLint
 
 ## 🚀 Rodando o projeto
@@ -52,7 +53,7 @@ OU
 yarn start
 ```
 
-4. O seu terminal irá retorna algo similar a imagem abaixo, basta segurar o Ctrl do seu teclado e clicar em cima de `http://localhost:5173`
+4. O seu terminal irá retorna algo similar a imagem abaixo, basta segurar o Ctrl do seu teclado e clicar em cima de `-> Local: http://localhost:5173`
 
 ![Retorno do terminal](./terminal.png)
 

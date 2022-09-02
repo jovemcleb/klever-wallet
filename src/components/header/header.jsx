@@ -4,7 +4,7 @@ import './header.scss';
 
 export default function Header() {
   return (
-    <header>
+    <header className="header">
       <img className="kleverLogo" src={kleverLogo} alt="Klever's logo" />
     </header>
   );
