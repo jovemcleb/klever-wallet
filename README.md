@@ -21,6 +21,8 @@ Este projeto consiste em uma simples carteira, onde é possível:
 - Editar token e saldo;
 - Excluir token da carteira.
 
+🚀Link do deployment: [https://klever-wallet.vercel.app/](https://klever-wallet.vercel.app/)
+
 ## 🔧 Tecnologias utilizadas
 
 - React JS
