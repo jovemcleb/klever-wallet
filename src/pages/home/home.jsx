@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../../components/header/header';
 import Wallet from '../../components/wallet/wallet';
-import './home.scss';
+import './home.css';
 export default function Home() {
   return (
     <div className="container-main-home">

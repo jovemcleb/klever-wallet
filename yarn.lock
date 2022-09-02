@@ -1494,7 +1494,7 @@
   "resolved" "https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.1.2.tgz"
   "version" "5.1.2"
 
-"sass@*", "sass@^1.54.5":
+"sass@*":
   "integrity" "sha512-p7DTOzxkUPa/63FU0R3KApkRHwcVZYC0PLnLm5iyZACyp15qSi32x7zVUhRdABAATmkALqgGrjCJAcWvobmhHw=="
   "resolved" "https://registry.npmjs.org/sass/-/sass-1.54.5.tgz"
   "version" "1.54.5"
