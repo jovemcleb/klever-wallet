@@ -6,3 +6,51 @@
     font-size: 2em;
   }
 }
+
+@media screen {
+  @media (max-width: 880px) {
+    .star-wish-wallet {
+      h1 {
+        font-size: 3.4em;
+      }
+
+      .shooting-star {
+        width: 8rem;
+      }
+    }
+  }
+
+  // @media (max-width: 535px) {
+  //   .star-wish-wallet {
+  //     padding-left: 2rem;
+  //   }
+  // }
+
+  // @media (max-width: 375px) {
+  //   .star-wish-wallet {
+  //     padding-left: 0.4rem;
+
+  //     h1 {
+  //       font-size: 3rem;
+  //     }
+
+  //     .shooting-star {
+  //       width: 4rem;
+  //     }
+  //   }
+  // }
+
+  // @media (max-width: 320px) {
+  //   .star-wish-wallet {
+  //     padding-left: 0.6rem;
+
+  //     h1 {
+  //       font-size: 2.6rem;
+  //     }
+
+  //     .shooting-star {
+  //       width: 3.8rem;
+  //     }
+  //   }
+  // }
+}

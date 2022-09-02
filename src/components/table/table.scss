@@ -43,3 +43,50 @@ table {
     }
   }
 }
+
+@media screen {
+  @media (max-width: 880px) {
+    table {
+      max-width: 50rem;
+      width: 50rem;
+      font-size: 2rem;
+
+      thead tr {
+        .th-token {
+          font-size: 2.4rem;
+        }
+
+        .th-balance {
+          font-size: 2.4rem;
+        }
+      }
+      tbody tr {
+        .td-token,
+        .td-balance {
+          font-size: 3.6rem;
+        }
+      }
+    }
+  }
+
+  // @media (max-width: 470px) {
+  //   table {
+  //     max-width: 40rem;
+  //     width: 40rem;
+  //   }
+  // }
+
+  // @media (max-width: 375px) {
+  //   table {
+  //     max-width: 35rem;
+  //     width: 35rem;
+  //   }
+  // }
+
+  // @media (max-width: 320px) {
+  //   table {
+  //     max-width: 30rem;
+  //     width: 30rem;
+  //   }
+  // }
+}

@@ -7,10 +7,10 @@ main {
     margin: auto;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     padding-bottom: 1rem;
-    width: 70rem;
-    max-width: 70rem;
+    width: 46rem;
+    max-width: 46rem;
   }
 
   .add-token-button {
@@ -28,4 +28,59 @@ main {
       background-color: #ad4bb9;
     }
   }
+}
+
+@media screen {
+  @media (max-width: 880px) {
+    main {
+      .bar-wallet {
+        width: 50rem;
+        max-width: 50rem;
+      }
+      .add-token-button {
+        width: 14rem;
+        height: 5rem;
+        font-size: 2.4rem;
+      }
+    }
+  }
+
+  // @media (max-width: 470px) {
+  //   main {
+  //     .bar-wallet {
+  //       width: 50rem;
+  //       max-width: 50rem;
+  //     }
+  //   }
+  // }
+
+  // @media (max-width: 375px) {
+  //   main {
+  //     .bar-wallet {
+  //       width: 35rem;
+  //       max-width: 35rem;
+  //     }
+
+  //     .add-token-button {
+  //       width: 8rem;
+  //       height: 2.8rem;
+  //       font-size: 1.3rem;
+  //     }
+  //   }
+  // }
+
+  // @media (max-width: 320px) {
+  //   main {
+  //     .bar-wallet {
+  //       width: 30rem;
+  //       max-width: 30rem;
+  //     }
+
+  //     .add-token-button {
+  //       width: 7rem;
+  //       height: 2.4rem;
+  //       font-size: 1.2rem;
+  //     }
+  //   }
+  // }
 }

@@ -1,4 +1,4 @@
-header {
+.header {
   display: flex;
   justify-content: center;
   padding: 6rem;
@@ -6,4 +6,33 @@ header {
   .kleverLogo {
     width: 20rem;
   }
+}
+
+@media screen {
+  @media (max-width: 880px) {
+    .header {
+      .kleverLogo {
+        width: 50rem;
+      }
+    }
+  }
+
+  // @media (max-width: 375px) {
+  //   .header {
+  //     .kleverLogo {
+  //       // padding: 0;
+  //       // height: 6rem;
+  //       width: 50rem;
+  //     }
+  //   }
+  // }
+
+  // @media (max-width: 320px) {
+  //   .header {
+  //     .kleverLogo {
+  //       padding: 0;
+  //       height: 6rem;
+  //     }
+  //   }
+  // }
 }

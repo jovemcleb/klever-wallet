@@ -87,7 +87,7 @@ export default function Form() {
   }, [token, balance]);
 
   return (
-    <form className="form-addToken" onSubmit={handleSave}>
+    <form className="form" onSubmit={handleSave}>
       <div className="inputs">
         <label htmlFor="input-token">Token</label>
         <input

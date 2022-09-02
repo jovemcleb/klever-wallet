@@ -1,4 +1,4 @@
-.form-addToken {
+.form {
   display: flex;
   flex-wrap: wrap;
   justify-content: end;
@@ -75,4 +75,132 @@
       }
     }
   }
+}
+
+@media screen {
+  @media (max-width: 880px) {
+    .form {
+      width: 50rem;
+      max-width: 50rem;
+
+      .inputs {
+        width: 47rem;
+        max-width: 47rem;
+
+        input {
+          height: 5rem;
+          font-size: 2.2rem;
+        }
+
+        label {
+          font-size: 2.4rem;
+        }
+      }
+
+      .div-button {
+        .button-save {
+          width: 14rem;
+          height: 5rem;
+          font-size: 2.4rem;
+        }
+
+        &.edit {
+          justify-content: space-between;
+          width: 47rem;
+
+          .button-remove,
+          .button-save {
+            width: 14rem;
+            height: 5rem;
+            font-size: 2.4rem;
+          }
+        }
+      }
+    }
+  }
+
+  // @media (max-width: 535px) {
+  //   .form {
+  //     width: 40rem;
+  //     max-width: 40rem;
+
+  //     .inputs {
+  //       width: 37.1rem;
+  //       max-width: 37.1rem;
+  //     }
+
+  //     .div-button {
+  //       &.edit {
+  //         justify-content: space-between;
+  //         width: 37rem;
+  //       }
+  //     }
+  //   }
+  // }
+
+  // @media (max-width: 440px) {
+  //   .form {
+  //     width: 37rem;
+  //     max-width: 37rem;
+  //     justify-content: center;
+  //   }
+  // }
+
+  // @media (max-width: 375px) {
+  //   .form {
+  //     width: 34rem;
+  //     max-width: 34rem;
+
+  //     .inputs {
+  //       height: 7.2rem;
+  //     }
+
+  //     .div-button {
+  //       .button-save {
+  //         width: 8rem;
+  //         height: 2.8rem;
+  //         font-size: 1.3rem;
+  //       }
+  //       &.edit {
+  //         justify-content: space-between;
+  //         width: 34rem;
+  //         .button-remove,
+  //         .button-save {
+  //           width: 8rem;
+  //           height: 2.8rem;
+  //           font-size: 1.3rem;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+
+  // @media (max-width: 320px) {
+  //   .form {
+  //     width: 29rem;
+  //     max-width: 29rem;
+
+  //     .inputs {
+  //       height: 7.2rem;
+  //     }
+
+  //     .div-button {
+  //       .button-save {
+  //         width: 7rem;
+  //         height: 2.4rem;
+  //         font-size: 1.2rem;
+  //       }
+  //       &.edit {
+  //         justify-content: space-between;
+  //         width: 29rem;
+  //         .button-remove,
+  //         .button-save {
+  //           width: 7rem;
+  //           height: 2.4rem;
+  //           font-size: 1.2rem;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 }
