@@ -2,7 +2,7 @@ import React, { memo, useContext } from 'react';
 import { FaEdit } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import { WalletContext } from '../../context/walletContext';
-import './table.scss';
+import './table.css';
 
 function TableComponent({ tokens }) {
   const { setTokenToEdit } = useContext(WalletContext);

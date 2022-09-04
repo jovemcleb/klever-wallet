@@ -1,4 +1,12 @@
 main {
+  @apply flex flex-col justify-center;
+}
+
+main .bar-wallet {
+  @apply w-[50rem] 
+  m-auto;
+}
+/* main {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -83,4 +91,4 @@ main {
   //     }
   //   }
   // }
-}
+} */

@@ -3,7 +3,7 @@ import { WalletContext } from '../../context/walletContext';
 import { useNavigate } from 'react-router-dom';
 import { Table } from '../table/table';
 import StarWishWallet from '../starWishWallet/starWishWallet';
-import './wallet.scss';
+import './wallet.css';
 
 export default function Wallet() {
   const history = useNavigate();

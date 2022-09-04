@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { WalletContext } from '../../context/walletContext';
-import './form.scss';
+import './form.css';
 
 export default function Form() {
   const history = useNavigate();

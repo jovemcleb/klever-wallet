@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Form from '../../components/form/form';
 import Header from '../../components/header/header';
 import StarWishWallet from '../../components/starWishWallet/starWishWallet';
-import './editToken.scss';
+import './editToken.css';
 
 export default function EditToken() {
   const history = useNavigate();

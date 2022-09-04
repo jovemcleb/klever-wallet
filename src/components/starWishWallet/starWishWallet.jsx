@@ -1,6 +1,6 @@
 import React from 'react';
 import shootingStar from '../../images/shooting-star.svg';
-import './starWishWallet.scss';
+import './starWishWallet.css';
 
 export default function StarWishWallet() {
   return (

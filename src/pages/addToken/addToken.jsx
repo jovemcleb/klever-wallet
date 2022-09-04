@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Form from '../../components/form/form';
 import Header from '../../components/header/header';
 import StarWishWallet from '../../components/starWishWallet/starWishWallet';
-import './addToken.scss';
+import './addToken.css';
 
 export default function AddToken() {
   const history = useNavigate();

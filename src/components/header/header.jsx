@@ -1,6 +1,6 @@
 import React from 'react';
 import kleverLogo from '../../images/logo.svg';
-import './header.scss';
+import './header.css';
 
 export default function Header() {
   return (

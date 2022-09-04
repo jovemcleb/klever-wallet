@@ -1,0 +1,9 @@
+.header {
+  @apply flex 
+  justify-center 
+  p-24;
+}
+
+.header .kleverLogo {
+  @apply w-96;
+}
