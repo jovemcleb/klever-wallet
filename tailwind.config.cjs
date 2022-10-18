@@ -6,9 +6,6 @@ module.exports = {
       purpleBlue: '#13152a',
     },
     extend: {
-      width: {
-        '98': '50rem'
-      }
     },
   },
   plugins: [],
