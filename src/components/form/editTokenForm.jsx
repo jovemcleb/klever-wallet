@@ -80,7 +80,7 @@ export default function EditTokenForm() {
         </button>
         <button
           className="button-save"
-          disabled={balance.length <= 2 ? true : false}
+          disabled={balance?.length <= 2 ? true : false}
           onClick={() => handleEditToken()}>
           Save
         </button>
