@@ -8,7 +8,7 @@ export default function AddTokenForm() {
 
   const [token, setToken] = useState('');
   const [balance, setBalance] = useState('');
-  const [isDisable, setIsDisable] = useState(true);
+  const [isDisable, setIsDisable] = useState(false);
 
   const { tokens, addToken } = useContext(WalletContext);
 
