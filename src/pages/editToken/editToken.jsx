@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import Form from '../../components/form/form';
+import EditTokenForm from '../../components/form/editTokenForm';
 import Header from '../../components/header/header';
 import StarWishWallet from '../../components/starWishWallet/starWishWallet';
 import './editToken.scss';
@@ -21,7 +21,7 @@ export default function EditToken() {
             Voltar
           </button>
         </section>
-        <Form />
+        <EditTokenForm />
       </main>
     </div>
   );
